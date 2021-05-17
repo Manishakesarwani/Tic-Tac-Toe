@@ -1,0 +1,15 @@
+.start{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.start > form > input{
+    margin: 10px;
+}
+
+.start > h5{
+    color: blue;
+    font-weight: bold;
+    font-size: 20px;
+}

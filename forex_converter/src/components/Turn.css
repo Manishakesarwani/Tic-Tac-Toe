@@ -1,0 +1,11 @@
+.Turn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+#turn{
+    font-size: 20px;
+    font-weight: bolder;
+    color: darkred;
+}

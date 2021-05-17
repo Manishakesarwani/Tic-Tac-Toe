@@ -1,0 +1,40 @@
+.p1, .p2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    font-size: 25px;
+    font-weight: bolder;
+    color: goldenrod;
+   
+}
+.draw{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    font-size: 25px;
+    font-weight: bolder;
+    color: firebrick;
+}
+
+.fimage{
+    width: 1349px;
+    height: 1000px;
+    position: relative;
+    bottom: 1650px;
+    animation-name: ex;
+    animation-duration: 10s;
+}
+
+
+@keyframes ex{
+   from{
+      position: relative;
+      bottom: 1650px;
+   }
+   to{
+      position: relative;
+      bottom: -60px;
+   }
+}
