@@ -98,21 +98,47 @@ class App extends React.Component {
       status : 2
     });
   }
-  
+
+  TryAgain = () => {
+    this.setState({
+      Player1 : null,
+      Player2 : null,
+      chance : null,
+      isgamestart : false,
+      FirstChance : null,
+      status : -1
+    })
+  }
+
+  reset = () =>{
+    this.setState({
+      chance : this.state.FirstChance,
+      isgamestart : true
+    });
+
+  }
 
   render(){
 
     var {Player1, Player2, chance, isgamestart, status} = this.state;
-    return isgamestart ? (
-      <div>
-     
-      <PlayerInfo player1 = {Player1} player2 = {Player2}/>
-      <Turn chance = {chance}/>
-      <Board chance = {this.handleChanceChange} winner = {this.handleWinner} drawn = {this.handleDraw}/>
-      <Result state = {status} player1 = {Player1} player2 = {Player2}/>
-      </div>
-    ) : <Start info = {this.getPlayerInfo}/>;
-  }  
+    if(isgamestart){
+      return(
+        <div>
+           <PlayerInfo player1 = {Player1} player2 = {Player2}/>
+           <Turn chance = {chance}/>
+           <Board chance = {this.handleChanceChange} winner = {this.handleWinner} drawn = {this.handleDraw} reset = {this.reset} />
+           <Result state = {status} player1 = {Player1} player2 = {Player2} change = {this.TryAgain}/>
+        </div>
+      )
+    }
+    else{
+      return(
+        <div>
+          <Start info = {this.getPlayerInfo}/>
+        </div>
+      )
+    }
+  } 
 }
 
 export default App;

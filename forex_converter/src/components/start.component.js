@@ -16,13 +16,17 @@ class Start extends React.Component{
     handleChange = (e) => {
 
         if(e.target.id === 'Player1'){
+            var p1 = e.target.value;
+            var new_p1 = p1.toUpperCase();
             this.setState({
-                player1 : e.target.value
+                player1 : new_p1
             });
         }
         else{
+            var p2 = e.target.value;
+            var new_p2 = p2.toUpperCase();
             this.setState({
-                player2 : e.target.value
+                player2 : new_p2
             });
         }
     }
@@ -32,13 +36,11 @@ class Start extends React.Component{
             <div  className = 'start'>
                 <h5>Enter player information </h5>
                     <form onSubmit = {this.handlesubmit}>
-                        <label htmlFor = 'Player1'>Player 1 :- </label>
+                        <label htmlFor = 'Player1'>First Player : </label>
                         <input onChange = {this.handleChange} type = 'text' id='Player1' required/>
-                        <br />
-                        <label htmlFor = 'Player2'>Player 2 :- </label>
+                        <label htmlFor = 'Player2'>Second Player : </label>
                         <input onChange = {this.handleChange} type = 'text' id='Player2' required/>
-                        <br/><br/>
-                        <input type = 'submit' value = 'Start the game'/>
+                        <input type = 'submit' value = 'Start the game' className = 'submit'/>
                     </form>
             </div>
         );

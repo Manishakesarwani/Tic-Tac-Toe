@@ -22,7 +22,7 @@
     width: 1349px;
     height: 1000px;
     position: relative;
-    bottom: 1650px;
+    bottom: 1700px;
     animation-name: ex;
     animation-duration: 10s;
 }
@@ -37,4 +37,9 @@
       position: relative;
       bottom: -60px;
    }
+}
+
+.btn{
+    margin-left: 750px;
+    margin-top: 20px;
 }

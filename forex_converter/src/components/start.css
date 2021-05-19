@@ -4,12 +4,29 @@
     justify-content: center;
     align-items: center;
 }
-.start > form > input{
-    margin: 10px;
-}
-
 .start > h5{
-    color: blue;
-    font-weight: bold;
+    color: rgb(219, 13, 140);
+    font-weight: bolder;
     font-size: 20px;
+    text-decoration: underline;
+}
+.start > form > input{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+.submit{
+    padding: 10px;
+    color: tomato;
+    font-size: 15px;
+    font-weight: bolder;
+    transition: 0.2s all;
+    border-radius: 5px;
+}
+.submit:active{
+    transform: scale(0.98);
+    box-shadow: 3px 2px 10px 1px rgba(0, 0, 0, 0.24);
+}
+label{
+    font-weight: bold;
 }

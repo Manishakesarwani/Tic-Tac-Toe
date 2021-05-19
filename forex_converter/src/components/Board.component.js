@@ -4,6 +4,7 @@ import Square from '../components/Square.component';
 import getWinner from '../helper/winner';
 import isDraw from '../helper/draw';
 
+
 class Board extends React.Component {
 
     state = {
@@ -37,12 +38,21 @@ class Board extends React.Component {
         }
     }
 
+    handleReset = () => {
+        this.setState({
+            board: this.state.board.fill(null),
+            isX : true
+        });
+        this.props.reset();
+    }
+
     render(){
         return(
             <div className = 'board'>
                 {this.state.board.map((value, idx) => {
                     return <Square key = {idx} type = {value} click = {this.handleChange} index = {idx}/>
-                })}                         
+                })}
+                <button onClick = {this.handleReset} className = 'button'>Reset Board</button>
             </div>
         );
     }

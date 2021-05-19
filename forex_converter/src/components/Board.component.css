@@ -3,6 +3,11 @@
     height: 300px;
     display: flex;
     flex-wrap: wrap;
-    margin-top: 50px;
+    margin-top: 30px;
     margin-left: 530px;
+}
+
+.button{
+    margin-top: 20px;
+    margin-left: 10px;
 }
