@@ -1,0 +1,28 @@
+.board{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+#btn {
+    width: 300px !important;
+}
+.btn {
+    float: right;
+}
+
+.button, .btn{
+    font-size: 15px;
+    transition: 0.2s all;
+    font-family: 'Courier New', monospace !important;
+    background: #F6F5F2;
+    border: 1px solid black;
+    border-radius: 1px;
+    padding: 5px;
+    margin-top: 20px;
+}
+.button:active, .btn:active{
+    transform: scale(0.98);
+    box-shadow: 3px 2px 10px 1px rgba(0, 0, 0, 0.24);
+}

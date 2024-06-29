@@ -1,0 +1,48 @@
+.start{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+.HeadDiv {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    background: #F6F5F2;
+}
+.formDiv {
+    border: 1px solid #F3D0D7;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 5%;
+    width: 20%;
+}
+.formDiv > form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+input {
+    text-align: center;
+    font-family: 'Courier New', monospace !important;
+}
+.submit{
+    font-size: 15px;
+    transition: 0.2s all;
+    font-family: 'Courier New', monospace !important;
+    background: #F6F5F2;
+    border: 1px solid black;
+    border-radius: 1px;
+    padding: 5px;
+}
+.submit:active{
+    transform: scale(0.98);
+    box-shadow: 3px 2px 10px 1px rgba(0, 0, 0, 0.24);
+}
+label{
+    font-weight: bold;
+}
+@media screen and (max-width:900px) {
+    .formDiv {
+        width: 50%;
+    }
+}
